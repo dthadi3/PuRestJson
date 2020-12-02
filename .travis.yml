@@ -35,6 +35,38 @@ matrix:
           sudo: required
           compiler: gcc
 
+#Added power Jobs
+        - env: PLATFORM='linux64'
+          os: linux
+          arch: ppc64le
+          dist: bionic
+          sudo: required
+          compiler: gcc
+
+        - env:
+          - PLATFORM='linux32'
+          - DIST=buster
+          - DEBIAN_ARCH=i386
+          - CHROOTDIR=/opt/crosscompilation
+
+          os: linux
+          arch: ppc64le
+          dist: bionic
+          sudo: required
+          compiler: gcc
+
+        - env:
+          - PLATFORM='linux_arm'
+          - DIST=buster
+          - DEBIAN_ARCH=armhf
+          - CHROOTDIR=/opt/crosscompilation
+
+          os: linux
+          arch: ppc64le
+          dist: bionic
+          sudo: required
+          compiler: gcc
+
         - env: PLATFORM='osx'
           os: osx
 
